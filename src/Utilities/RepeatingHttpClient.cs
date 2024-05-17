@@ -36,7 +36,6 @@ internal static class RepeatingHttpClient
                 }
 
                 var result = await client.SendAsync(request, cancellationToken);
-                _ = result.EnsureSuccessStatusCode();
 
                 return result;
             }
